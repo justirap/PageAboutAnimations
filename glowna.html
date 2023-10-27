@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <title>Projekt Animacje - Strona Głowna </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <style>
+    body {
+      background: linear-gradient(45deg, white, #809aeb, white);
+      overflow-x: hidden;
+
+    }
+
+    #container {
+      overflow-x: hidden;
+    }
+
+    .site-footer {
+      background-color: #26272b;
+      padding: 45px 0 20px;
+      font-size: 15px;
+      line-height: 24px;
+      color: white;
+      background-image: linear-gradient(45deg, black, gray, black);
+    }
+
+    .site-footer hr {
+      border-top-color: #bbb;
+      opacity: 0.5
+    }
+
+    .site-footer hr.small {
+      margin: 20px 0
+    }
+
+    .site-footer h6 {
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      letter-spacing: 2px
+    }
+
+    .site-footer a {
+      color: white;
+    }
+
+    .site-footer a:hover {
+      color: yellow;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      padding-left: 0;
+      list-style: none
+    }
+
+    .footer-links li {
+      display: block
+    }
+
+    .footer-links a {
+      color: #737373
+    }
+
+    .footer-links a:active,
+    .footer-links a:focus,
+    .footer-links a:hover {
+      color: yellow;
+      text-decoration: none;
+    }
+
+    .footer-links.inline li {
+      display: inline-block
+    }
+
+    .copyright-text {
+      margin: 0
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse" style="margin-bottom: 0;">
+    <div class="container">
+
+      <div class="col-lg-3">
+        <ul class="nav navbar-nav">
+
+          <li> <a href="glowna.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+
+        <ul class="nav navbar-nav">
+
+
+          <li><a href="przyklady.html">Przykłady</a></li>
+
+          <li><a href="glowna.html#zrodla">Źródła</a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-lg-5">
+
+        <p style="color: #fff; margin-top: 15px;">
+
+          TUTORIAL ANIMACJE
+
+        </p>
+      </div>
+  </nav>
+
+
+  <div id="zdj" style="background:url('img/zdj3.jpg'); width:100%; height:450px;">
+    <center>
+      <img src="img/napis.png" alt="" style="margin-top: 50px;">
+    </center>
+  </div>
+
+
+  <br>
+
+  <div class="col-lg-2"></div>
+
+  <div class="row">
+
+    <div class="col-lg-8">
+
+      <div class="jumbotron" style="padding: 3%;padding-bottom: 7%;">
+        <h1>Animacje CSS</h1>
+        <h4>Animacje CSS zostały wprowadzone w trzeciej wersji języka kaskadowych arkuszy stylów i są wspierane przez
+          przeglądarki od następujących wersji:</h4>
+        <hr class="my-4">
+        <h5>
+          <ul>
+            <li>Google Chrome 4.0 (do wersji 43.0 wymagany przedrostek -webkit-)</li>
+            <li>Mozilla Firefox 5.0 (do wersji 16.0 wymagany przedrostek -moz-)</li>
+            <li>Opera 12.0 (do wersji 15.0 wymagany przedrostek -o-, do wersji 30.0 wymagany przedrostek -webkit-)</li>
+            <li>Internet Explorer 10.0</li>
+            <li> Microsoft Edge</li>
+            <li>Safari 4.0 (do wersji 9.0 wymagany przedrostek -webkit-)</li>
+          </ul>
+        </h5>
+      </div>
+
+      <div class="jumbotron" style="padding: 3%; padding-bottom: 7%;">
+        <h4>Animacje CSS wywołuje się za pomocą funkcji animation, której zadaniem jest zmiana właściwości animowanego
+          obiektu. Podstawowa składnia funkcji to:</h4>
+        <hr class="my-4">
+        <h5 style="color:blue"><b>animation: name duration timing-function delay iteration-count direction fill-mode
+            play-state; </b></h5>
+
+      </div>
+
+
+      <div class="jumbotron" style="padding: 3%; padding-bottom: 7%;">
+        <h4>Poszczególne parametry funkcji określają:</h4>
+        <hr class="my-4">
+        <h5>
+          <ul>
+            <li><b>name</b> (keyframename | none | initial | inherit) -
+              Identyfikator funkcji, która ma zostać wywołana po uruchomieniu animacji.</li>
+            <br>
+            <li><b>duration</b> (time | initial | inherit) -
+              Czas trwania pojedynczego, pełnego cyku animacji.</li>
+            <br>
+            <li><b>timing-function</b> (linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end |
+              steps(int,start | end) | cubic-bezier(n,n,n,n) | initial | inherit)
+              <br> <br>Funkcja określająca szybkość animacji w poszczególnych jej krokach, na przykład:
+              <ul>
+                <br>
+                <li>stała prędkość podczas całej animacji (linear)</li>
+                <br>
+                <li>wolne rozpoczęcie, następnie przyspieszenie i zwolnienie przed końcem animacji (ease)</li>
+                <br>
+                <li>powolne rozpoczęcie, szybkie zakończenie (ease-in)</li>
+                <br>
+                <li>szybkie rozpoczęcie, powolne zakończenie (ease-out)</li>
+                <br>
+                <li>wolne rozpoczęcie i zakończenie, szybki środek animacji (ease-in-out)</li>
+              </ul>
+            </li>
+            <br>
+            <li><b>delay</b> (time | initial | inherit) -
+              Opóźnienie – czas, jaki musi upłynąć przed rozpoczęciem animacji.</li>
+            <br>
+            <li> <b>iteration-count</b> (number | infinite | initial | inherit) -
+              Liczba określająca ile razy animacja ma się wykonać.</li>
+
+            <br>
+            <li><b>direction</b> (normal | reverse | alternate | alternate-reverse | initial | inherit)
+              <br><br>
+              Sposób wykonania animacji, na przykład:
+              <ul>
+                <br>
+                <li>standardowo – od początku do końca (normal)</li>
+                <br>
+                <li>odwrotnie – od końca do początku (reverse)</li>
+                <br>
+                <li>naprzemiennie – od początku do końca, a potem od końca do początku (alternate)</li>
+                <br>
+                <li>naprzemiennie odwrotnie – od końca do początku, a potem od początku do końca (alternate-reverse)
+                </li>
+              </ul>
+            </li>
+
+            <br>
+            <li><b>fill-mode</b> (none | forwards | backwards | both | initial | inherit)
+              <br> <br>
+              Parametr określa co ma się stać z animacją, gdy zostanie ona ukończona, na przykład:
+              <br>
+              <ul>
+                <br>
+                <li>ma wrócić do stanu początkowego (backwards)</li>
+                <br>
+                <li>ma przejść do stanu w którym się zakończyła (forwards)</li>
+              </ul>
+            </li>
+            <br>
+            <li><b>play-state</b> (paused | running | initial | inherit)
+              <br> <br> Parametr definiuje aktualny stan animacji, na przykład:
+              <ul>
+                <br>
+                <li>działająca (running)</li>
+                <br>
+                <li>wstrzymana (paused)</li>
+              </ul>
+
+            </li>
+
+          </ul>
+        </h5>
+
+        <div style="float: right; margin-bottom: 10px;">
+          <a class="btn btn-warning btn-lg" style="color: black;" href="przyklady.html#div1" role="button">Pokaż mi!</a>
+        </div>
+      </div>
+
+      <div class="jumbotron" style="padding: 3%; padding-bottom: 7%;">
+
+        <h4>Dla tak przygotowanej właściwości animation, należy zdefiniować funkcję<b> @keyframes name</b>, która będzie
+          określać stan obiektu w poszczególnych krokach animacji.</h4>
+        <hr class="my-4">
+        <h5>
+          @keyframes nazwa_animacji
+          <br>
+          {
+          <br> 0% { wartość }
+          <br> 25% { wartość }
+          <br> 50% { wartość }
+          <br> 75% { wartość }
+          <br> 100% { wartość }
+          <br> }
+        </h5>
+        <div style="float: right; margin-bottom: 10px;">
+          <a class="btn btn-warning btn-lg" style="color: black;" href="przyklady.html#div2" role="button">Pokaż mi!</a>
+        </div>
+      </div>
+
+      <div class="jumbotron" style="padding: 3%; padding-bottom: 7%;">
+
+        <h4>Chcesz zobaczyć fascynujące przykłady?</h4>
+
+
+        <div style="float: right; margin-bottom: 10px;">
+          <a class="btn btn-warning btn-lg" style="color: black;" href="przyklady.html#div3" role="button">Pokaż mi!</a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>TUTORIAL ANIMACJE</h6>
+          <p class="text-justify"> Poradnik dotyczący korzystania z animacji CSS stworzony na potrzebę lekcji TSSI. </p>
+        </div>
+
+        <div class="col-xs-6 col-md-2">
+
+        </div>
+
+        <div class="col-xs-6 col-md-4" id="zrodla">
+          <h6>Źródła</h6>
+          <ul class="footer-links">
+            <li><a href="https://webkod.pl/kurs-css/lekcje/dzial-1/animacja-elementu-animation-css3">webkod.pl</a></li>
+            <li><a href="https://www.w3schools.com/css/css3_animations.asp">w3schools.com</a></li>
+            <li><a href="https://danielpietrasik.pl/animacje-css/">danielpietrasik.pl</a></li>
+            <li><a href="http://www.kurshtmlcss.pl/kurs-css/lekcja20-animation-@keyframes.php">kurshtmlcss.pl</a></li>
+            <li><a
+                href="https://webdesign.tutsplus.com/pl/articles/15-inspiring-examples-of-css-animation-on-codepen--cms-23937">webdesign.tutsplus.com</a>
+            </li>
+            <li><a href="https://projects.raspberrypi.org/pl-PL/projects/sunrise/1">projects.raspberrypi.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2020 Justyna Kaczkowska
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+</body>
+
+</html>

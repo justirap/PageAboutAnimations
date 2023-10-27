@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <title>Projekt Animacje - Przykłady </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <style>
+    body {
+      background: linear-gradient(45deg, white, #809aeb, white);
+      overflow-x: hidden;
+    }
+
+
+    #div1 {
+      background-color: white;
+      padding: 20px;
+    }
+
+    #div2 {
+      background-color: white;
+      padding: 20px;
+    }
+
+    #div3 {
+      background-color: white;
+      padding: 20px;
+    }
+
+    #przyklad1 {
+      text-align: center;
+      padding: 15px 0;
+      border: 3px solid #FDD700;
+      animation: szerokosc 5s ease-in-out 0s infinite alternate backwards,
+        tlo 500ms linear 5s infinite normal forwards;
+      -webkit-animation: szerokosc 5s ease-in-out 0s infinite alternate backwards,
+        tlo 500ms linear 5s infinite normal forwards;
+    }
+
+    #przyklad2 {
+      text-align: center;
+      padding: 15px 0;
+      width: 200px;
+      height: 100px;
+      border: 3px solid black;
+      animation: rainbow 5s ease-in-out 0s infinite;
+      -webkit-animation: rainbow 5s ease-in-out 0s infinite;
+    }
+
+    .button {
+      text-decoration: none;
+      text-align: center;
+      color: #3cbabe;
+      border: 2px solid #3cbabe;
+      border-radius: 4px;
+      position: relative;
+      width: 150px;
+      line-height: 40px;
+      display: inline-block;
+      font-family: Arial;
+      font-weight: 600;
+      overflow: hidden;
+    }
+
+    .button:hover {
+      background-color: #3cbabe;
+      color: #ffffff;
+      border-bottom: 2px solid #319598;
+    }
+
+    .button:before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      width: 40px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -70px;
+      transform: skewX(-45deg) translateX(0px);
+      transition: none;
+    }
+
+    .button:hover:before {
+      transform: skewX(-45deg) translateX(250px);
+      transition: all 0.4s ease-in;
+    }
+
+
+
+    .preloader {
+      margin: 80px auto 0;
+      font-size: 70px;
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      animation: animation 1.7s infinite ease;
+    }
+
+    @keyframes animation {
+      0% {
+        transform: rotate(0deg);
+        box-shadow: 0 -0.83em 0 -0.4em #F34A53, 0 -0.83em 0 -0.42em #F34A53, 0 -0.83em 0 -0.44em #F34A53, 0 -0.83em 0 -0.46em #F34A53, 0 -0.83em 0 -0.477em #F34A53;
+      }
+
+      5%,
+      95% {
+        box-shadow: 0 -0.83em 0 -0.4em #F34A53, 0 -0.83em 0 -0.42em #F34A53, 0 -0.83em 0 -0.44em #F34A53, 0 -0.83em 0 -0.46em #F34A53, 0 -0.83em 0 -0.477em #F34A53;
+      }
+
+      10%,
+      59% {
+        box-shadow: 0 -0.83em 0 -0.4em #F34A53, -0.087em -0.825em 0 -0.42em #F34A53, -0.173em -0.812em 0 -0.44em #F34A53, -0.256em -0.789em 0 -0.46em #F34A53, -0.297em -0.775em 0 -0.477em #F34A53;
+      }
+
+      20% {
+        box-shadow: 0 -0.83em 0 -0.4em #F34A53, -0.338em -0.758em 0 -0.42em #F34A53, -0.555em -0.617em 0 -0.44em #F34A53, -0.671em -0.488em 0 -0.46em #F34A53, -0.749em -0.34em 0 -0.477em #F34A53;
+      }
+
+      38% {
+        box-shadow: 0 -0.83em 0 -0.4em #F34A53, -0.377em -0.74em 0 -0.42em #F34A53, -0.645em -0.522em 0 -0.44em #F34A53, -0.775em -0.297em 0 -0.46em #F34A53, -0.82em -0.09em 0 -0.477em #F34A53;
+      }
+
+      100% {
+        transform: rotate(360deg);
+        box-shadow: 0 -0.83em 0 -0.4em #F34A53, 0 -0.83em 0 -0.42em #F34A53, 0 -0.83em 0 -0.44em #F34A53, 0 -0.83em 0 -0.46em #F34A53, 0 -0.83em 0 -0.477em #F34A53;
+      }
+    }
+
+
+    nav ul {
+      list-style: none;
+
+    }
+
+    nav ul li {
+      margin-bottom: 1px;
+    }
+
+    nav ul li a {
+      display: block;
+      text-decoration: none;
+      color: #CC0033;
+      background-color: black;
+      padding: 8px 20px;
+
+    }
+
+    nav ul li a:hover {
+      background-color: yellow;
+      color: black;
+      transform: scale(1.2);
+    }
+
+
+    .site-footer {
+      background-color: #26272b;
+      padding: 45px 0 20px;
+      font-size: 15px;
+      line-height: 24px;
+      color: white;
+      background-image: linear-gradient(45deg, black, gray, black);
+    }
+
+    .site-footer hr {
+      border-top-color: #bbb;
+      opacity: 0.5
+    }
+
+    .site-footer hr.small {
+      margin: 20px 0
+    }
+
+    .site-footer h6 {
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      letter-spacing: 2px
+    }
+
+    .site-footer a {
+      color: white;
+    }
+
+    .site-footer a:hover {
+      color: yellow;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      padding-left: 0;
+      list-style: none
+    }
+
+    .footer-links li {
+      display: block
+    }
+
+    .footer-links a {
+      color: #737373
+    }
+
+    .footer-links a:active,
+    .footer-links a:focus,
+    .footer-links a:hover {
+      color: yellow;
+      text-decoration: none;
+    }
+
+    .footer-links.inline li {
+      display: inline-block
+    }
+
+    .copyright-text {
+      margin: 0
+    }
+
+    @keyframes szerokosc {
+      0% {
+        width: 150px;
+      }
+
+      100% {
+        width: 350px;
+      }
+    }
+
+    @keyframes tlo {
+      0% {
+        background-color: #FFF;
+      }
+
+      100% {
+        background-color: #F00;
+      }
+    }
+
+    @-webkit-keyframes szerokosc {
+      0% {
+        width: 150px;
+      }
+
+      100% {
+        width: 350px;
+      }
+    }
+
+    @-webkit-keyframes tlo {
+      0% {
+        background-color: #FFF;
+      }
+
+      100% {
+        background-color: #F00;
+      }
+    }
+
+    @keyframes rainbow {
+
+      0% {
+        background-color: red;
+      }
+
+      10% {
+        background-color: orange;
+      }
+
+      20% {
+        background-color: yellow;
+      }
+
+      30% {
+        background-color: lime;
+      }
+
+      40% {
+        background-color: green;
+      }
+
+      50% {
+        background-color: cyan;
+      }
+
+      60% {
+        background-color: blue;
+      }
+
+      70% {
+        background-color: purple;
+      }
+
+      80% {
+        background-color: violet;
+      }
+
+      90% {
+        background-color: pink;
+      }
+
+      100% {
+        background-color: red;
+      }
+
+    }
+
+    @-webkit-keyframes rainbow {
+
+      0% {
+        background-color: red;
+      }
+
+      10% {
+        background-color: orange;
+      }
+
+      20% {
+        background-color: yellow;
+      }
+
+      30% {
+        background-color: lime;
+      }
+
+      40% {
+        background-color: green;
+      }
+
+      50% {
+        background-color: cyan;
+      }
+
+      60% {
+        background-color: blue;
+      }
+
+      70% {
+        background-color: purple;
+      }
+
+      80% {
+        background-color: violet;
+      }
+
+      90% {
+        background-color: pink;
+      }
+
+      100% {
+        background-color: red;
+      }
+
+    }
+
+    #napis {
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      animation: lot 3s infinite;
+
+
+    }
+
+    @-webkit-keyframes lot {
+
+      from {
+        left: 120%;
+        opacity: 0;
+        transform: rotate(0) scale(.75);
+      }
+
+      50% {
+        left: 70%;
+        opacity: 0.5;
+        transform: rotate(-720deg) scale(1.5);
+      }
+
+      to {
+        left: 0;
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      }
+
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse" style="margin-bottom: 0;">
+    <div class="container">
+
+      <div class="col-lg-3">
+        <ul class="nav navbar-nav">
+
+          <li> <a href="glowna.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+
+        <ul class="nav navbar-nav">
+
+          <li><a href="przyklady.html">Przykłady</a></li>
+
+          <li><a href="przyklady.html#zrodla">Źródła</a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-lg-5">
+
+        <p style="color: #fff; margin-top: 15px;">
+
+          TUTORIAL ANIMACJE
+
+        </p>
+      </div>
+  </nav>
+
+
+  <div id="zdj" style="background:url('img/zdj3.jpg'); width:100%; height:450px;">
+    <center>
+      <img src="img/napis.png" alt="" style="margin-top: 50px;">
+    </center>
+  </div>
+
+
+  <br>
+
+  <div class="col-lg-2"></div>
+
+  <div class="row">
+
+    <div class="col-lg-8">
+
+      <div id="div1">
+        <h4> <b>Przykład:</b></h4>
+        <br>
+        <img src="img/zdj1.png" alt="">
+        <br><br>
+        <div id="przyklad1">
+          animowany div
+        </div>
+
+      </div>
+      <br>
+
+      <div id="div2">
+        <h4> <b>Przykład:</b></h4>
+        <br>
+        <img src="img/zdj2.png" alt="">
+        <br><br>
+        <div id="przyklad2">
+          animowany div
+        </div>
+      </div>
+      <br>
+      <div id="div3">
+        <b>Przykład 1:</b>
+        <div id="przyklad3">
+          <img src="img/zdj3.png" alt="">
+          <br><br>
+          <a href="#" class="button">Przycisk</a>
+          <br> <br><br> <br>
+
+          <b>Przykład 2:</b>
+          <div id="przyklad4">
+            <img src="img/zdj4.png" alt="">
+            <nav>
+              <ul>
+                <li><a href="#">Spis Gier 2020</a></li>
+                <li><a href="#">O Grach</a></li>
+                <li><a href="#">Cennik</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">GamePlaye</a></li>
+                <li><a href="#">Beta Testy</a></li>
+                <li><a href="#">Spis Gier do 2019</a></li>
+                <li><a href="#">Spis Gier do 2015</a></li>
+                <li><a href="#">Spis Gier do 2010</a></li>
+              </ul>
+            </nav>
+          </div>
+          <br><br>
+          <b>Przykład 3:</b>
+          <br> <br>
+          <div id="przyklad5">
+            <img src="img/zdj5.png" alt="">
+            <div class="preloader">
+
+            </div>
+            <br> <br>
+            <b>Przykład 4:</b>
+            <div id="przyklad6">
+              <img src="img/zdj6.png" alt="">
+              <img id="napis" src="napis.png" alt="">
+              <br> <br>
+              <br> <br>
+              <br> <br>
+              <br> <br>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+    </div>
+  </div>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>TUTORIAL ANIMACJE</h6>
+          <p class="text-justify"> Poradnik dotyczący korzystania z animacji CSS stworzony na potrzebę lekcji TSSI. </p>
+        </div>
+
+        <div class="col-xs-6 col-md-2">
+
+        </div>
+
+        <div class="col-xs-6 col-md-4" id="zrodla">
+          <h6>Źródła</h6>
+          <ul class="footer-links">
+            <li><a href="https://webkod.pl/kurs-css/lekcje/dzial-1/animacja-elementu-animation-css3">webkod.pl</a></li>
+            <li><a href="https://www.w3schools.com/css/css3_animations.asp">w3schools.com</a></li>
+            <li><a href="https://danielpietrasik.pl/animacje-css/">danielpietrasik.pl</a></li>
+            <li><a href="http://www.kurshtmlcss.pl/kurs-css/lekcja20-animation-@keyframes.php">kurshtmlcss.pl</a></li>
+            <li><a
+                href="https://webdesign.tutsplus.com/pl/articles/15-inspiring-examples-of-css-animation-on-codepen--cms-23937">webdesign.tutsplus.com</a>
+            </li>
+            <li><a href="https://projects.raspberrypi.org/pl-PL/projects/sunrise/1">projects.raspberrypi.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2020 Justyna Kaczkowska
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+</body>
+
+</html>
